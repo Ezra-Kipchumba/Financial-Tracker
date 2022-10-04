@@ -1,8 +1,8 @@
 import React, {useState} from 'react'
 
 function TransactionForm() {
-  const [firstName, setFirstName] = useState("John");
-  const [lastName, setLastName] = useState("Henry");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
   const [submittedData, setSubmittedData] = useState([]);
 
   function handleFirstNameChange(event) {
