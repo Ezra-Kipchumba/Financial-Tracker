@@ -1,40 +1,34 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react';
+import Expense from './Expense';
 
-function TransactionList() {
-    const [transactions, setTransactions] = useState([]);
-    // function fetcher() {
-        useEffect(() => {
-            fetch("http://localhost:8002/bots")
-              .then((res) => res.json())
-              .then(setTransactions);
-        },[])
-    // }
-    function listTransactions(transaction) {
-      console.log(transaction);
-      setTransactions(transactions.map((b) => (b.id === transaction.id ? { ...b, confirm: true } : b)));
-    }
-    function removeTransaction(transaction) {
-      console.log(transaction);
-      setTransactions(transactions.map((b) => (b.id === transaction.id ? { ...b, aconfirm: false } : b)));
-    }
-    function deleteTransaction(transaction) {
-      // console.log("Transaction Deleted")
-      setTransactions(transactions.filter((b) => b.id !== transaction.id));
-    }
-    return (
-      <div>
-        {/* <YourBotArmy */}
-          transactions={transactions.filter((b) => b.confirm)}
-          rremoveTransaction={removeTransaction}
-          deleteTransaction={deleteTransaction}
-        {/* /> */}
-        {/* <BotCollection */}
-          transactions={transactions}
-          listTransactions={listTransactions}
-          deleteTransaction={deleteTransaction}
-        {/* /> */}
-      </div>
-    );
+function TransactionsList({ transactions, handleSort, handleDeletion }) {
+  return (
+    <table className="ui celled striped padded table">
+      <tbody>
+        <tr>
+          <th>
+            <h3 className="ui center aligned header">Date</h3>
+          </th>
+          <th>
+            <h3 className="ui center aligned header" onClick={handleSort}>
+              Description
+            </h3>
+          </th>
+          <th>
+            <h3 className="ui center aligned header">Amount</h3>
+          </th>
+        </tr>
+        {/* render a list of <Transaction> components here */}
+        {transactions.map((transactionObj) => (
+          <Expense
+            key={transactionObj.id}
+            handleDeletion={handleDeletion}
+            transactionObj={transactionObj}
+          />
+        ))}
+      </tbody>
+    </table>
+  );
 }
 
-export default TransactionList;
+export default TransactionsList;

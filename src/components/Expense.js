@@ -1,9 +1,16 @@
 import React from 'react'
 
-function Expense() {
+function Expense({transactionObj, handleDeletion}) {
+  // onclick = removes from transactions
+  // Delete method on API
+  const { id, date, description, amount } = transactionObj;
   return (
-    <div>Expense</div>
-  )
+    <tr onClick={() => handleDeletion(id)}>
+      <td>{date}</td>
+      <td>{description}</td>
+      <td>{amount}</td>
+    </tr>
+  );
 }
 
 export default Expense

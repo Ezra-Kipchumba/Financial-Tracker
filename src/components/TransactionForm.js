@@ -1,46 +1,44 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 
-function TransactionForm() {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [submittedData, setSubmittedData] = useState([]);
-
-  function handleFirstNameChange(event) {
-    setFirstName(event.target.value);
+function TransactionForm({ submit }) {
+  
+  const [formData, setFormData] = React.useState({});
+  function handleChange(event) {
+    setFormData({
+      ...formData,
+      [event.target.name]: event.target.value,
+    });
   }
 
-  function handleLastNameChange(event) {
-    setLastName(event.target.value);
+  function getSubmitData(e) {
+    e.preventDefault();
+    submit(formData);
   }
-
-  function handleSubmit(event) {
-    event.preventDefault();
-    const formData = { firstName: firstName, lastName: lastName };
-    const dataArray = [...submittedData, formData];
-    setSubmittedData(dataArray);
-    setFirstName("");
-    setLastName("");
-  }
-
-  const listOfSubmissions = submittedData.map((data, index) => {
-    return (
-      <div key={index}>
-        {data.firstName} {data.lastName}
-      </div>
-    );
-  });
-
   return (
-    <div id="forms">
-      <form onSubmit={handleSubmit}>
-        <input type="text" onChange={handleFirstNameChange} value={firstName} />
-        <input type="text" onChange={handleLastNameChange} value={lastName} />
-        <button type="submit">Submit</button>
+    <div className="ui segment">
+      <form className="ui form">
+        <div className="inline fields">
+          <input type="date" name="date" onBlur={handleChange} />
+          <input
+            type="text"
+            name="description"
+            placeholder="Description"
+            onBlur={handleChange}
+          />
+          <input
+            type="number"
+            name="amount"
+            placeholder="Amount"
+            step="0.01"
+            onBlur={handleChange}
+          />
+        </div>
+        <button className="ui button" type="submit" onClick={getSubmitData}>
+          Add Transaction
+        </button>
       </form>
-      <h3>Submissions</h3>
-      {listOfSubmissions}
     </div>
   );
 }
 
-export default TransactionForm
+export default TransactionForm;
