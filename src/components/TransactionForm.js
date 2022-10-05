@@ -15,17 +15,23 @@ function TransactionForm({ submit }) {
     submit(formData);
   }
   return (
-    <div className="ui segment">
-      <form className="ui form">
-        <div className="inline fields">
-          <input type="date" name="date" onBlur={handleChange} />
+    <div className="form-container">
+      <form className="user-form">
+        <div className="inline-fields">
           <input
+            className="user-input-date"
+            type="date"
+            name="date"
+            onBlur={handleChange}
+          />
+          {/* <input
             type="text"
             name="description"
             placeholder="Description"
             onBlur={handleChange}
-          />
+          /> */}
           <input
+            className="user-input"
             type="number"
             name="amount"
             placeholder="Amount"
@@ -33,8 +39,12 @@ function TransactionForm({ submit }) {
             onBlur={handleChange}
           />
         </div>
-        <button className="ui button" type="submit" onClick={getSubmitData}>
-          Add Transaction
+        <button
+          className="user-input-button"
+          type="submit"
+          onClick={getSubmitData}
+        >
+          Add New Transaction
         </button>
       </form>
     </div>
