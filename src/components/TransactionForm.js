@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 function TransactionForm({ submit }) {
   
-  const [formData, setFormData] = React.useState({});
+  const [formData, setFormData] = useState({});
   function handleChange(event) {
     setFormData({
       ...formData,
