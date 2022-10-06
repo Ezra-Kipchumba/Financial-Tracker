@@ -1,23 +1,26 @@
 import React from "react"
-// import { Route, BrowserRouter as Router } from "react-router-dom";
-// import NavBar from "./Navbar";
-// import Home from "./Home";
+import { BrowserRouter as Router, Route,Switch} from "react-router-dom";
 import Balance from "./Balance";
+import NavBar from "./Navbar";
+import Home from "./Home";
+// import Expense from "./Expense";
 // import Expense from "./Expense";
 
 function App() {
 
 
   return (
-    <div className="container">
-      <Balance />
-      {/* <NavBar />
-      <Router>
-        <Route exact path="/" component={Home} />
-        <Route path="/" component={Balance} />
-        <Route path="/" component={Expense} />
-      </Router> */}
-    </div>
+    <Router>
+      <div>
+        <NavBar />
+        <div className="container">
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/balance" component={Balance} />
+          </Switch>
+        </div>
+      </div>
+    </Router>
   );
 }
 

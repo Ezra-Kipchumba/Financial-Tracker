@@ -2,6 +2,7 @@ import React from 'react';
 import Expense from './Expense';
 
 function TransactionsList({ transactions, handleDeletion }) {
+  
   return (
     <div>
       <h3 className="tabledate">Date</h3>

@@ -19,23 +19,17 @@ function TransactionForm({ submit }) {
       <form className="user-form">
         <div className="inline-fields">
           <input
-            className="user-input-date"
-            type="date"
-            name="date"
-            onBlur={handleChange}
-          />
-          {/* <input
-            type="text"
-            name="description"
-            placeholder="Description"
-            onBlur={handleChange}
-          /> */}
-          <input
             className="user-input"
             type="number"
             name="amount"
             placeholder="Amount"
             step="0.01"
+            onBlur={handleChange}
+          />
+          <input
+            className="user-input-date"
+            type="date"
+            name="date"
             onBlur={handleChange}
           />
         </div>

@@ -40,7 +40,7 @@ function Balance() {
     }).then(() => fetcher());
   }
 
-  
+console.log(transactions)
   return (
     <div>
       <TransactionForm submit={handleSubmit} />
