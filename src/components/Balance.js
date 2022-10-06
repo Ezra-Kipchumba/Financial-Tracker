@@ -2,11 +2,11 @@ import React,{useState} from "react";
 import TransactionList from "./TransactionList";
 import TransactionForm from "./TransactionForm";
 import "./App.css";
-// import { flushSync } from "react-dom";
 
 function Balance() {
   const [transactions, setTransactions] = useState([]);
-//   const [copyTransactions, setCopytransaction] = useState([]);
+
+
   function fetcher() {
     fetch("http://localhost:3000/transactions")
       .then((resp) => resp.json())
@@ -15,9 +15,12 @@ function Balance() {
       });
   }
 
+
   React.useEffect(() => {
     fetcher();
   }, []);
+
+
 
   function handleSubmit(obj) {
     // console.log(obj);
@@ -29,12 +32,15 @@ function Balance() {
       .then(() => fetcher());
   }
 
+
   
   function handleDeletion(id) {
     fetch(`http://localhost:3000/transactions/${id}`, {
       method: "DELETE",
     }).then(() => fetcher());
   }
+
+  
   return (
     <div>
       <TransactionForm submit={handleSubmit} />
