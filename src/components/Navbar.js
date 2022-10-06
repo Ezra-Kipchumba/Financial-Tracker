@@ -46,6 +46,16 @@ function NavBar() {
       >
         Expense
       </NavLink>
+      <NavLink
+        to="/transactionList"
+        exact
+        style={linkStyles}
+        activeStyle={{
+          background: "darkblue",
+        }}
+      >
+        TransactionList
+      </NavLink>
     </div>
   );
 }

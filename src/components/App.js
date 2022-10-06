@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route,Switch} from "react-router-dom";
 import Balance from "./Balance";
 import NavBar from "./Navbar";
 import Home from "./Home";
-// import Expense from "./Expense";
+import TransactionsList from "./TransactionList";
 
 
 function App() {
@@ -17,6 +17,7 @@ function App() {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/balance" component={Balance} />
+            <Route exact path="/" component={TransactionsList} />
           </Switch>
         </div>
       </div>
