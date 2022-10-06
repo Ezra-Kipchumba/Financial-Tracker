@@ -11,8 +11,13 @@ function Balance() {
     fetch("http://localhost:3000/transactions")
       .then((resp) => resp.json())
       .then((result) => {
+        // console.log(result)
         setTransactions(result);
-      });
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        console.log("server is down!!");
+      });;
   }
 
 
