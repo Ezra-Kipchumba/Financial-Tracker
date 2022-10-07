@@ -1,5 +1,5 @@
 import React,{useState} from "react";
-// import TransactionList from "./TransactionList";
+import TransactionList from "./TransactionList";
 import TransactionForm from "./TransactionForm";
 import "./App.css";
 
@@ -49,10 +49,10 @@ function Balance() {
   return (
     <div>
       <TransactionForm submit={handleSubmit} />
-      {/* <TransactionList
+      <TransactionList
         transactions={transactions}
         handleDeletion={handleDeletion}
-      /> */}
+      />
     </div>
   );
 }

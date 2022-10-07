@@ -7,7 +7,7 @@ function NavBar() {
     width: "50px",
     padding: "9px",
     paddingRight: "34px",
-    margin: "20px 66px 6px",
+    margin: "20px 150px 6px",
     background: "blue",
     textDecoration: "none",
     fontSize:"24px",
@@ -37,24 +37,24 @@ function NavBar() {
         Balance
       </NavLink>
       <NavLink
-        to="/expense"
+        to="/about"
         exact
         style={linkStyles}
         activeStyle={{
           background: "darkblue",
         }}
       >
-        Expense
+        About
       </NavLink>
       <NavLink
-        to="/transactionList"
+        to="/signup"
         exact
         style={linkStyles}
         activeStyle={{
           background: "darkblue",
         }}
       >
-        TransactionList
+        Sign
       </NavLink>
     </div>
   );
