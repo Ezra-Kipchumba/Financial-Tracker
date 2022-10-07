@@ -3,22 +3,22 @@ import React from 'react'
 function Footer() {
   return (
     <div className="footer">
-      <div>
+      <div className="fi-footer">
         <img src="" alt=""></img>
         <h3>The Heart of Financing</h3>
-        <img src="" alt=""></img>
-        <img src="" alt=""></img>
-        <img src="" alt=""></img>
-        <img src="" alt=""></img>
+        <img src="" alt="instagram"></img>
+        <img src="" alt="twitter"></img>
+        <img src="" alt="LinkedIn"></img>
+        <img src="" alt="facebook"></img>
       </div>
-      <div>
+      <div className="f-footer">
         <h2>More</h2>
         <span>Media</span>
         <span>Newsletter</span>
         <span>Programs</span>
         <span>Events</span>
       </div>
-      <div>
+      <div className="f-footer">
         <h2>About</h2>
         <span>Patner with us</span>
         <span>Cookies</span>
