@@ -1,5 +1,5 @@
 *{
-    background-color: white;
+    background-color: gray;
     
 }
 
@@ -54,10 +54,8 @@
 }
 .footer{
     background-color: black;
-    /* display: flex; */
     position: relative;
     color:  white;
-    flex-direction: column;
     clear: both;
     position: absolute;
     height: 200px;

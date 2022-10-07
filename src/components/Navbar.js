@@ -8,9 +8,9 @@ function NavBar() {
     padding: "9px",
     paddingRight: "34px",
     margin: "20px 150px 6px",
-    background: "blue",
+    background: "green",
     textDecoration: "none",
-    fontSize:"24px",
+    fontSize: "24px",
     color: "white",
     borderRadius: "6px",
   };
