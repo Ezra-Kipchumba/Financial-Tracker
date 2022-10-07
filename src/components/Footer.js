@@ -3,6 +3,11 @@ import React from 'react'
 function Footer() {
   return (
     <div className="footer">
+
+        {/* <img src={require('../assets/anne-nygard-OtqaCE_SEMI-unsplash.jpg')} */}
+          {/* className="logo"
+          alt='logo-main'></img> */}
+
       <div className="fi-footer">
         <img src="" alt=""></img>
         <h3>The Heart of Financing</h3>
