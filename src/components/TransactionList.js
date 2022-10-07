@@ -5,17 +5,19 @@ function TransactionsList({ transactions, handleDeletion }) {
   
   return (
     <table>
-      <tr>
-        <th className="tabledate">Date</th>
-        <th className="tableamount">Amount</th>
-      </tr>
-      {transactions.map((transactionObj) => (
-        <Expense
-          key={transactionObj.id}
-          handleDeletion={handleDeletion}
-          transactionObj={transactionObj}
-        />
-      ))}
+      <tbody>
+        <tr>
+          <th className="tabledate">Date</th>
+          <th className="tableamount">Amount</th>
+        </tr>
+        {transactions?.map((transactionObj) => (
+          <Expense
+            key={transactionObj.id}
+            handleDeletion={handleDeletion}
+            transactionObj={transactionObj}
+          />
+        ))}
+      </tbody>
     </table>
   );
 }

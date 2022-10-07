@@ -8,7 +8,7 @@ function Expense({ transactions,transactionObj, handleDeletion }) {
 
   const { id, date, amount } = transactionObj;
   return (
-    <div onClick={() => handleDeletion(id)}>
+    <thead onClick={() => handleDeletion(id)}>
       <TransactionList
         transactions={transactions}
         handleDeletion={handleDeletion}
@@ -17,7 +17,7 @@ function Expense({ transactions,transactionObj, handleDeletion }) {
         <td>{date}</td>
         <td>{amount}</td>
       </tr>
-    </div>
+    </thead>
   );
 }
 
