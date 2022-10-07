@@ -13,8 +13,10 @@ function Expense({ transactions,transactionObj, handleDeletion }) {
         transactions={transactions}
         handleDeletion={handleDeletion}
       />
-      {date}
-      {amount}
+      <tr>
+        <td>{date}</td>
+        <td>{amount}</td>
+      </tr>
     </div>
   );
 }

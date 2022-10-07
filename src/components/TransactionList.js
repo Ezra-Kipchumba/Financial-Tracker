@@ -4,9 +4,11 @@ import Expense from './Expense';
 function TransactionsList({ transactions, handleDeletion }) {
   
   return (
-    <div>
-      <h3 className="tabledate">Date</h3>
-      <h3 className="tableamount">Amount</h3>
+    <table>
+      <tr>
+        <th className="tabledate">Date</th>
+        <th className="tableamount">Amount</th>
+      </tr>
       {transactions.map((transactionObj) => (
         <Expense
           key={transactionObj.id}
@@ -14,7 +16,7 @@ function TransactionsList({ transactions, handleDeletion }) {
           transactionObj={transactionObj}
         />
       ))}
-    </div>
+    </table>
   );
 }
 
