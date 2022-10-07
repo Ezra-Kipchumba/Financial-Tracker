@@ -10,10 +10,12 @@ function Home() {
       </h2>
       <div>
         <img
-          src="../assets/micheile-dot-com-f030K9IzpcM-unsplash.jpg"
+          // src={require("../assets/micheile-dot-com-f030K9IzpcM-unsplash.jpg")}
           alt="saving"
         ></img>
-        <img src="../assets/matthew-lancaster-OtfnlTw0lH4-unsplash.jpg" alt="finances"></img>
+        <img
+          // src={require("../assets/matthew-lancaster-OtfnlTw0lH4-unsplash.jpg")}
+          alt="finances"></img>
       </div>
     </div>
   );

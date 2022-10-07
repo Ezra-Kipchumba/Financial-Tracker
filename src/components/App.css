@@ -1,6 +1,8 @@
 *{
     background-color: white;
+    background-image: url("../assets/micheile-dot-com-f030K9IzpcM-unsplash.jpg");
 }
+
 .container{
     display: flex;
     justify-content: center;
