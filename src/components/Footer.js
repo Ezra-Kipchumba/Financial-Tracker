@@ -4,17 +4,35 @@ function Footer() {
   return (
     <div className="footer">
 
-        {/* <img src={require('../assets/anne-nygard-OtqaCE_SEMI-unsplash.jpg')} */}
-          {/* className="logo"
-          alt='logo-main'></img> */}
-
       <div className="fi-footer">
-        <img src="" alt=""></img>
+        <img
+          className="social-app"
+          src="https://cdn-icons-png.flaticon.com/128/1390/1390704.png"
+          alt="logoo"
+        ></img>
         <h3>The Heart of Financing</h3>
-        <img src="" alt="instagram"></img>
-        <img src="" alt="twitter"></img>
-        <img src="" alt="LinkedIn"></img>
-        <img src="" alt="facebook"></img>
+        <div className='fe-footer'>
+          <img
+            className="social-apps"
+            src="https://cdn-icons-png.flaticon.com/128/3955/3955024.png"
+            alt="instagram"
+          ></img>
+          <img
+            className="social-apps"
+            src="https://cdn-icons-png.flaticon.com/128/3670/3670151.png"
+            alt="twitter"
+          ></img>
+          <img
+            className="social-apps"
+            src="https://cdn-icons-png.flaticon.com/128/145/145807.png"
+            alt="LinkedIn"
+          ></img>
+          <img
+            className="social-apps"
+            src="https://cdn-icons-png.flaticon.com/128/5968/5968764.png"
+            alt="facebook"
+          ></img>
+        </div>
       </div>
       <div className="f-footer">
         <h2>More</h2>

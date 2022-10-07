@@ -47,11 +47,11 @@
 }
 .user-input-button{
     font-size: 24px;
-    padding: 5px;
+    padding: 10px;
     color: white;
     margin: 20px;
-    width: 60%;
-    background-color: darkblue;
+    width: 33%;
+    background-color: forestgreen;
 }
 .footer{
     background-color: black;
@@ -69,18 +69,7 @@
     /* margin-top: -200px; */
     
 }
-.f-footer{
-    background-color: black;
-    display: flex;
-    flex-direction: column;
-    font-size: 20px;
-    letter-spacing: 1px;
-}
-.fi-footer{
-    background-color: black;
-    display: flex;
-    flex-direction: column;
-}
+
 span,h2,h3,img{
     background-color: black;
 }
@@ -140,7 +129,7 @@ td {
     padding: 20px;
 }
 .about-a h1{
-    color: #fff;
+    color: forestgreen;
     text-align: center;
     
 }
@@ -192,6 +181,43 @@ td {
   padding: 5px;
 }
 
-.signup{
-    background-color: forestgreen;
+/* footer */
+
+.f-footer{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    letter-spacing: 1px;
+    /* border-radius: 10px; */
+}
+.fi-footer{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+}
+.social-apps{
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    padding: 4px;
+}
+.social-app{
+    height: 50px;
+    width: 50px;
+}
+.fi-footer{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    font-size: 22px;
+    text-align: start;
+    margin-right: 20px;
+}
+.fe-footer{
+    display: flex;
+    background-color: black;
+
 }

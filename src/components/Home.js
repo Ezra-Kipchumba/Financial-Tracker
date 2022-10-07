@@ -16,10 +16,10 @@ function Home() {
           className="image"
           alt="saving"
         ></img>
-        <img
-          // src={require("../assets/matthew-lancaster-OtfnlTw0lH4-unsplash.jpg")}
+        {/* <img
+          src={require("../assets/matthew-lancaster-OtfnlTw0lH4-unsplash.jpg")}
           alt="finances"
-        ></img>
+        ></img> */}
       </div>
     </div>
   );

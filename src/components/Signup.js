@@ -4,6 +4,7 @@ function Signup() {
   // States for registration
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [number, setNumber] = useState("");
   const [password, setPassword] = useState("");
 
   // States for checking the errors
@@ -21,6 +22,11 @@ function Signup() {
     setEmail(e.target.value);
     setSubmitted(false);
   };
+  // Handling the Phone Number change
+  const handleNumber = (e) => {
+    setNumber(e.target.value);
+    setSubmitted(false);
+  };
 
   // Handling the password change
   const handlePassword = (e) => {
@@ -31,7 +37,7 @@ function Signup() {
   // Handling the form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (name === "" || email === "" || password === "") {
+    if (name === "" || email === "" || number === "" || password === "") {
       setError(true);
     } else {
       setSubmitted(true);
@@ -95,6 +101,13 @@ function Signup() {
           className="input"
           value={email}
           type="email"
+        />
+        <label className="label">Phone Number</label>
+        <input
+          onChange={handleNumber}
+          className="input"
+          value={number}
+          type="number"
         />
 
         <label className="label">Password</label>
