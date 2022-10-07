@@ -2,7 +2,7 @@ import React from 'react'
 
 function Home() {
   return (
-    <div>
+    <div className='home'>
       <h1 style={{ fontWeight: "bold" }}>Welcome,</h1>
       <h2>
         With us, we help you manage your finances <br></br>for a better
@@ -10,7 +10,8 @@ function Home() {
       </h2>
       <div>
         <img
-          // src={require("../assets/micheile-dot-com-f030K9IzpcM-unsplash.jpg")}
+          src={require("../assets/micheile-dot-com-f030K9IzpcM-unsplash.jpg")}
+          className="image"
           alt="saving"
         ></img>
         <img

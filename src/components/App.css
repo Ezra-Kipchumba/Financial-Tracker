@@ -6,6 +6,7 @@
 .container{
     display: flex;
     justify-content: center;
+    width: auto;
     
 }
 
@@ -53,9 +54,23 @@
 }
 .footer{
     background-color: black;
-    display: flex;
+    /* display: flex; */
     position: relative;
     color:  white;
     flex-direction: column;
+    clear: both;
+    position: absolute;
+    height: 200px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    /* margin-top: -200px; */
     
+}
+
+.image{
+    height: 400px;
+}
+.home{
+    background-color: grey;
 }
