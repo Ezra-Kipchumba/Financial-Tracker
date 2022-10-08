@@ -2,6 +2,22 @@
     background-color: gray;
     
 }
+/* home */
+
+.home-app{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+.home{
+    background-color: grey;
+    display: flex;
+    margin-top: 70px;
+    letter-spacing: 1.5px;
+}
+
+
+/* form */
 
 .container{
     display: flex;
@@ -77,12 +93,7 @@ span,h2,h3,img{
 .image{
     height: 400px;
 }
-.home{
-    background-color: grey;
-    display: flex;
-    margin-top: 70px;
-    letter-spacing: 1.5px;
-}
+
 .image{
     border-radius: 120px 20px 120px 20px;
 }

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useHistory } from "react-router-dom"
 
 function Signup() {
   // States for registration
@@ -43,6 +44,7 @@ function Signup() {
       setSubmitted(true);
       setError(false);
     }
+    useHistory.pushState("/src/components/Home")
   };
 
   // Showing success message
@@ -72,6 +74,7 @@ function Signup() {
       </div>
     );
   };
+
 
   return (
     <div className="form">
