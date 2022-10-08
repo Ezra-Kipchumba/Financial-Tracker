@@ -5,7 +5,7 @@ function TransactionsList({ transactions, handleDeletion }) {
   
   return (
     <table>
-      <tbody>
+      <thead>
         <tr>
           <th className="tabledate">Date</th>
           <th className="tableamount">Amount</th>
@@ -17,7 +17,7 @@ function TransactionsList({ transactions, handleDeletion }) {
             transactionObj={transactionObj}
           />
         ))}
-      </tbody>
+      </thead>
     </table>
   );
 }
