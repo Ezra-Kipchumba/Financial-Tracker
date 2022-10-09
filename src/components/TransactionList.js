@@ -4,7 +4,6 @@ import Expense from './Expense';
 function TransactionsList({ transactions, handleDeletion }) {
   
   return (
-    <table>
       <thead>
         <tr>
           <th className="tabledate">Date</th>
@@ -18,7 +17,6 @@ function TransactionsList({ transactions, handleDeletion }) {
           />
         ))}
       </thead>
-    </table>
   );
 }
 

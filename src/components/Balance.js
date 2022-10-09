@@ -28,7 +28,7 @@ function Balance() {
 
 
   function handleSubmit(obj) {
-    // console.log(obj);
+    console.log(obj);
     fetch("http://localhost:3000/transactions", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -49,10 +49,10 @@ function Balance() {
   return (
     <div>
       <TransactionForm submit={handleSubmit} />
-      <TransactionList
-        transactions={transactions}
-        handleDeletion={handleDeletion}
-      />
+        <TransactionList
+          transactions={transactions}
+          handleDeletion={handleDeletion}
+        />
     </div>
   );
 }

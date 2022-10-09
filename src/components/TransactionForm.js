@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-function TransactionForm({ submit }) {
+function TransactionForm({ submit,transactionObj }) {
   
   const [formData, setFormData] = useState({});
   function handleChange(event) {
@@ -14,8 +14,30 @@ function TransactionForm({ submit }) {
     e.preventDefault();
     submit(formData);
   }
+
+ const [first, setfirst] = useState(0);
+
+ const addChange = (event) => {
+  const sumArr = event.target.value.split(",");
+  const sum = sumArr.reduce(function (a, b) {
+    return parseInt(a) + parseInt(b);
+  }, 0);
+   console.log(sum)
+  if (sum) {
+    setfirst(sum);
+  }
+ };
+
+  // const sumAll = transactionObj?.map((datum) => datum.amount).reduce((a, b) => a + b);
+  // console.log(sumAll)
+
+  const res = transactionObj?.map((transact) => transact.amount)
+    .reduce((acc, transact) => acc + transact);
+  console.log(res);
   return (
     <div className="form-container">
+      <h1>Balance</h1>
+      <h1>${first}</h1>
       <form className="user-form">
         <div className="inline-fields">
           <input
@@ -24,6 +46,7 @@ function TransactionForm({ submit }) {
             name="amount"
             placeholder="Amount"
             step="0.01"
+            onChange={addChange}
             onBlur={handleChange}
           />
           <input

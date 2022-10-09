@@ -44,7 +44,7 @@ function Signup() {
       setSubmitted(true);
       setError(false);
     }
-    useHistory.pushState("/src/components/Home")
+    useHistory.push("/");
   };
 
   // Showing success message
