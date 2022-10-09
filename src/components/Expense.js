@@ -12,8 +12,7 @@ function Expense({ transactions,transactionObj, handleDeletion }) {
 
   return (
     <table>
-      <tbody transactions={transactions}
-        >
+      <tbody transactions={transactions}>
         <tr>
           <td>{date}</td>
           <td>{amount}</td>
